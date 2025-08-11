@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChickenMath - Egg Tracker & Flock Manager</title>
+    <meta name="description" content="Track eggs, manage your flock, and optimize your backyard chicken operation with ChickenMath - the ultimate chicken management app.">
+    <meta property="og:title" content="ChickenMath - Egg Tracker & Flock Manager">
+    <meta property="og:description" content="Track eggs, manage your flock, and optimize your backyard chicken operation with ChickenMath - the ultimate chicken management app.">
+    <meta property="og:image" content="https://chickenmath.app/assets/og.png">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6c757d;
+            --accent: #ff6b35;
+            --accent-light: #ff8a65;
+            --border: #e9ecef;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #2d2d2d;
+                --text-primary: #ffffff;
+                --text-secondary: #adb5bd;
+                --border: #404040;
+                --shadow: rgba(0, 0, 0, 0.3);
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--accent);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        main {
+            padding: 4rem 0;
+        }
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .screenshot-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+        footer {
+            background: var(--bg-secondary);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🐔 ChickenMath</div>
+            <div class="tagline">The Ultimate Chicken Management App</div>
+            <a href="#" class="cta-button">Coming Soon to App Store</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">Track, Manage, Optimize</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🥚</div>
+                        <h3 class="feature-title">Smart Egg Tracking</h3>
+                        <p class="feature-description">Record daily egg production, track individual chicken performance, and view detailed analytics to optimize your flock's productivity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3 class="feature-title">Complete Flock Management</h3>
+                        <p class="feature-description">Manage unlimited chickens with detailed profiles, track hatch dates, breeds, and health notes all in one place.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">Milestones & Achievements</h3>
+                        <p class="feature-description">Celebrate your flock's accomplishments with age-based milestones and performance achievements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏰</div>
+                        <h3 class="feature-title">Smart Reminders</h3>
+                        <p class="feature-description">Never miss important chicken care tasks with customizable reminders for feeding, watering, and cleaning.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3 class="feature-title">Breed Encyclopedia</h3>
+                        <p class="feature-description">Comprehensive guide to 25+ chicken breeds with detailed characteristics and care requirements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3 class="feature-title">iCloud Backup</h3>
+                        <p class="feature-description">Automatic data backup to iCloud with customizable frequency. Never lose your flock data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="screenshot-section">
+                <img src="assets/screenshot1.png" alt="ChickenMath App Screenshot" class="screenshot">
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Perfect for Backyard Chicken Keepers</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">📈 Analytics & Insights</h3>
+                        <p class="feature-description">Visual charts and graphs help you understand production trends and make data-driven decisions for your flock.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">🎯 Individual Tracking</h3>
+                        <p class="feature-description">Monitor each chicken's performance, track their milestones, and identify your best layers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">🌤️ Seasonal Patterns</h3>
+                        <p class="feature-description">Recognize seasonal patterns in egg production and adjust care routines accordingly.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="mailto:support@chickenmath.app">Support</a>
+            </div>
+            <div class="copyright">
+                © 2024 ChickenMath. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
