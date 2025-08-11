@@ -15,13 +15,6 @@ ChickenMath is a comprehensive iOS app designed for backyard chicken keepers to 
 - **iCloud Backup**: Automatic data backup with customizable frequency
 - **Analytics & Insights**: Visual charts and trend analysis
 
-## 🌐 Website Structure
-
-- `index.html` - Main landing page with app features and information
-- `privacy.html` - Privacy policy with auto-updating date
-- `assets/` - Images and icons for the website
-- `CNAME` - Custom domain configuration for chickenmath.app
-
 ## 🚀 Deployment
 
 This website is designed to be deployed on GitHub Pages. Simply push the contents to a GitHub repository and enable GitHub Pages in the repository settings.
